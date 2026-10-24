@@ -1,0 +1,48 @@
+{
+  "best_model": "XGBoost",
+  "target_mapping": {
+    "NotPlaced": 0,
+    "Placed": 1
+  },
+  "features": [
+    "CGPA",
+    "Internships",
+    "Projects",
+    "Workshops/Certifications",
+    "AptitudeTestScore",
+    "SoftSkillsRating",
+    "SSC_Marks",
+    "HSC_Marks",
+    "ExtracurricularActivities",
+    "PlacementTraining"
+  ],
+  "numeric_features": [
+    "CGPA",
+    "Internships",
+    "Projects",
+    "Workshops/Certifications",
+    "AptitudeTestScore",
+    "SoftSkillsRating",
+    "SSC_Marks",
+    "HSC_Marks"
+  ],
+  "categorical_features": [
+    "ExtracurricularActivities",
+    "PlacementTraining"
+  ],
+  "positive_class": "Placed",
+  "metrics": {
+    "Accuracy": 0.8116,
+    "Precision": 0.7718,
+    "Recall": 0.7781,
+    "F1": 0.7749,
+    "ROC-AUC": 0.8847,
+    "CV F1 mean": 0.7588,
+    "CV F1 std": 0.005
+  },
+  "data_source": "data\\train.csv",
+  "split_strategy": "GroupShuffleSplit",
+  "cross_validation_strategy": "StratifiedGroupKFold",
+  "duplicate_profiles_kept": true,
+  "data_note": "Identical input profiles are kept in the same group during hold-out splitting and cross-validation. Conflicting labels are retained. The dataset's provenance and independent real-world predictive validity have not been established."
+}

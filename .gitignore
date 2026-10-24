@@ -1,0 +1,25 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Editor and test files
+.vscode/
+.pytest_cache/
+.mypy_cache/
+
+# Local datasets (check dataset license before publishing)
+data/*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
